@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/CaptainCollie/python-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/CaptainCollie/python-project-lvl2/actions)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/432c45dcd58b372c9606/test_coverage)](https://codeclimate.com/github/CaptainCollie/python-project-lvl2/test_coverage)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/432c45dcd58b372c9606/maintainability)](https://codeclimate.com/github/CaptainCollie/python-project-lvl2/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a6cf5cb7977a0f24108d/maintainability)](https://codeclimate.com/github/CaptainCollie/python-project-lvl2_1/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a6cf5cb7977a0f24108d/test_coverage)](https://codeclimate.com/github/CaptainCollie/python-project-lvl2_1/test_coverage)
 
 The second project of Hexlet Python Developer course.
 
