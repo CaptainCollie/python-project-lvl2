@@ -16,13 +16,14 @@ def plain(diff_d: dict):
                 result.extend(inner(value, f'{prev_key}{key}'))
             elif key.startswith('- ') and key.replace('- ', '+ ') in d:
                 value = to_str(value)
-                val2 = d.get(key.replace('- ', '+ '))
-                val2 = to_str(val2)
+                value_with_same_key_other_sign = d.get(key.replace('- ', '+ '))
+                value_with_same_key_other_sign = to_str(
+                    value_with_same_key_other_sign)
                 processed_keys.add(key.replace('- ', '+ '))
                 key = key.replace('- ', '')
                 result.append(
                     f"Property '{prev_key}{key}' was updated. "
-                    f"From {value} to {val2}")
+                    f"From {value} to {value_with_same_key_other_sign}")
             elif key.startswith('+ ') and key not in processed_keys:
                 value = to_str(value)
                 key = key.replace('+ ', '')
