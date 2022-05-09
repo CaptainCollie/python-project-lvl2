@@ -1,11 +1,7 @@
 import itertools
 
 
-def format(diff_d):
-    return stylish_diff(diff_d)
-
-
-def stylish_diff(current_value, depth=0, replacer=' ', spaces_count=4):
+def format(current_value, depth=0, replacer=' ', spaces_count=4):
     if not isinstance(current_value, dict):
         current_value = to_str(current_value)
         return str(current_value)
@@ -17,7 +13,7 @@ def stylish_diff(current_value, depth=0, replacer=' ', spaces_count=4):
     for key, val in current_value.items():
         deep_indent, key = move_sign_from_key_to_indent(deep_indent, key)
         lines.append(f'{deep_indent}{key.strip()}: '
-                     f'{stylish_diff(val, deep_indent_size)}')
+                     f'{format(val, deep_indent_size)}')
         deep_indent = replacer * deep_indent_size
 
     result = itertools.chain("{", lines, [current_indent + "}"])

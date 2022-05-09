@@ -26,6 +26,8 @@ def test_generate_diff(files: tuple, formatter: str, expected: str):
 @pytest.mark.parametrize('files, formatter, expected', [
     (('tests/fixtures/file1.json', 'tests/fixtures/file2.json'),
      'stylish', 'tests/fixtures/expected_complexdicts_stylish_gendiff.txt'),
+    (('tests/fixtures/file1.json', 'tests/fixtures/file2.json'), 'noname',
+     'tests/fixtures/expected_complexdicts_stylish_gendiff.txt'),
 ]
 )
 def test_generate_diff_specific(files: tuple, formatter: str, expected: str):
