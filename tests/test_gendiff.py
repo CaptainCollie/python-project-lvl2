@@ -47,4 +47,4 @@ def test_generate_diff_specific(files: tuple, format: str, expected: str):
                          )
 def test_with_unsupported_file_extension(files: tuple, format: str):
     with pytest.raises(TypeError, match="Can't read this type of file"):
-        result = generate_diff(*files, format)
+        generate_diff(*files, format)
