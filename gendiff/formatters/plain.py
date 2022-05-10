@@ -1,8 +1,8 @@
 from typing import Dict, Union
 
 
-def format(diff_d: dict):
-    result_str = '\n'.join(plain(diff_d))
+def do_format(diff_dict: dict):
+    result_str = '\n'.join(plain(diff_dict))
     return result_str
 
 
