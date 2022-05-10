@@ -14,7 +14,7 @@ from gendiff.generate_diff import generate_diff
     (('tests/fixtures/file1.json', 'tests/fixtures/file2.json'), 'json',
      'tests/fixtures/expected_complexdicts_json_gendiff.txt'),
 ]
-                         )
+)
 def test_generate_diff(files: tuple, format: str, expected: str):
     f = open(expected, 'r',
              encoding='utf-8')
@@ -29,7 +29,7 @@ def test_generate_diff(files: tuple, format: str, expected: str):
     (('tests/fixtures/file1.json', 'tests/fixtures/file2.json'), 'noname',
      'tests/fixtures/expected_complexdicts_stylish_gendiff.txt'),
 ]
-                         )
+)
 def test_generate_diff_specific(files: tuple, format: str, expected: str):
     f = open(expected, 'r',
              encoding='utf-8')
@@ -44,7 +44,7 @@ def test_generate_diff_specific(files: tuple, format: str, expected: str):
 @pytest.mark.parametrize('files, format', [
     (('tests/fixtures/file1.txt', 'tests/fixtures/file2.txt'), 'stylish'),
 ]
-                         )
+)
 def test_with_unsupported_file_extension(files: tuple, format: str):
     with pytest.raises(TypeError, match="Can't read this type of file"):
         generate_diff(*files, format)
