@@ -2,8 +2,8 @@ from typing import Dict, Union
 
 
 def do_format(diff_dict: dict):
-    result_str = '\n'.join(plain(diff_dict))
-    return result_str
+    result = '\n'.join(plain(diff_dict))
+    return result
 
 
 def plain(d: Dict[str, Union[str, dict]], prev_key: str = '') -> list:

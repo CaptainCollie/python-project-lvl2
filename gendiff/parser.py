@@ -3,7 +3,7 @@ import json
 import yaml
 
 
-def parser(data, data_type):
+def parse(data, data_type):
     data_type_mapping = {
         'json': json.loads,
         'yaml': yaml.safe_load,
